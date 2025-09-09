@@ -21,9 +21,10 @@ def NYC_motor_vehicle_crashes(context: dg.AssetExecutionContext) -> dg.Materiali
         "pageNumber=1"
 
         payload = {}
+        app_token = os.getenv('APP_TOKEN')
         headers = {
-        'X-App-Token': 'ypOu1S4FxLVgfEH7rzCKJg32m',
-        }
+            f"X-App-Token': '{app_token}'",
+        }  
         # Get the raw username and password from .env
         basic_auth_username = os.getenv('BASIC_AUTH_USERNAME')
         basic_auth_password = os.getenv('BASIC_AUTH_PASSWORD')
