@@ -17,7 +17,7 @@ def NYC_motor_vehicle_crashes(context: dg.AssetExecutionContext) -> dg.Materiali
     month_to_fetch = "2023-03"
     try:
         url = "https://data.cityofnewyork.us/api/v3/views/h9gi-nx95/query.csv?" \
-        "pageSize=100&" \
+        "pageSize=1000&" \
         "pageNumber=1"
 
         payload = {}
